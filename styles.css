@@ -1,0 +1,235 @@
+:root{
+    --accent:#0b66ff;
+    --accent-2:#3fc7ff;
+    --muted:#6b7280;
+    --bg:#fbfdff;
+    --card:#ffffff;
+    --glass-shadow: 0 6px 20px rgba(12,24,40,0.06);
+    --shadow: 0 10px 30px rgba(12,24,40,0.06);
+    --gold:#f6b73c;
+    --maxw:1180px;
+    --radius:12px;
+  }
+  
+  /* Base reset & mobile defaults */
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:linear-gradient(180deg,#f7fbff 0%,var(--bg) 100%);
+    color:#071a2f;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.45;
+    overflow-x:hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:20px}
+  
+  /* Links/buttons */
+  a{color:var(--accent);text-decoration:none}
+  button, .btn{cursor:pointer;border:0}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:10px;font-weight:700}
+  .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 8px 24px rgba(11,102,255,0.14)}
+  .btn-ghost{background:transparent;border:1px solid rgba(11,102,255,0.12);color:var(--accent);}
+  
+  /* Header - mobile first */
+  .site-header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,0.88);backdrop-filter: blur(6px);box-shadow:0 2px 8px rgba(10,20,30,0.03)}
+  .header-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+  .brand{display:flex;align-items:center;gap:10px}
+  .logo{height:44px;width:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;box-shadow:var(--shadow)}
+  .brand-text{line-height:1}
+  .brand-name{font-weight:800;font-size:15px}
+  .brand-sub{font-size:12px;color:var(--muted)}
+  .navlinks{display:none;gap:12px;align-items:center}
+  .hamburger{background:none;border:0;font-size:22px;padding:8px}
+  
+  /* Mobile menu (hidden area expanded on click) */
+  .mobile-menu{display:none;padding:12px;border-top:1px solid rgba(0,0,0,0.04);background:transparent}
+  
+  /* HERO */
+  .hero-section{padding:18px 0}
+  .hero-grid{display:block}
+  .eyebrow{display:inline-block;background:linear-gradient(90deg,#e6f4ff,#f0fbff);color:var(--accent);padding:6px 12px;border-radius:999px;font-weight:700;font-size:13px;margin-bottom:10px}
+  h1{font-size:22px;margin:8px 0 10px;line-height:1.12}
+  .lead{color:var(--muted);font-size:14px;margin-bottom:12px}
+  .hero-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+  .trust-list{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0;padding:0;list-style:none}
+  .trust-list li{background:var(--card);padding:8px 10px;border-radius:10px;box-shadow:var(--glass-shadow);font-weight:700;color:var(--muted);font-size:13px}
+  .accent-card{display:flex;justify-content:space-between;align-items:center;gap:8px;background:linear-gradient(180deg,#fff,#fbfdff);padding:10px;border-radius:12px;box-shadow:var(--glass-shadow);margin-top:12px}
+  .price{font-weight:800;font-size:18px}
+  .pill{display:inline-block;background:#fff;padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,0.04);font-weight:700}
+  
+  /* hero right content (stacked on mobile) */
+  .hero-right{margin-top:14px}
+  .hero-media-wrap{border-radius:12px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+  .hero-media{width:100%;display:block;height:220px;object-fit:cover;transition:transform .5s ease}
+  .hero-media-wrap:hover .hero-media{transform:scale(1.02)}
+  .hero-badge{position:absolute;left:12px;bottom:12px;background:linear-gradient(90deg,#fff,#fcfdff);padding:8px;border-radius:10px;box-shadow:var(--glass-shadow);font-weight:800}
+  
+  /* EXPERIENCES */
+  .experiences{padding:18px 0}
+  .experiences-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+  .exp-card{background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow);text-align:center}
+  .exp-emoji{font-size:22px;margin-bottom:8px}
+  .exp-card h3{margin:6px 0;font-size:15px}
+  
+  /* PACKAGES */
+  .packages{padding:18px 0}
+  .packages-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+  .pkg-card{background:linear-gradient(180deg,#fff,#fbfdff);padding:14px;border-radius:12px;box-shadow:var(--shadow);position:relative;overflow:hidden;border:1px solid rgba(10,20,30,0.04)}
+  .pkg-card .ribbon{position:absolute;right:-26px;top:12px;transform:rotate(42deg);background:var(--gold);color:#612c00;padding:6px 36px;font-weight:800;font-size:13px}
+  .ribbon-alt{background:#cfefff;color:#0b66ff;padding:6px 30px}
+  .pkg-card h3{margin:8px 0;font-size:17px}
+  .pkg-features{padding-left:16px;margin:8px 0 12px;color:var(--muted);font-size:14px}
+  .pkg-bottom{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+  .pkg-bottom .price{font-size:16px}
+  .pkg-bottom a{width:100%;text-align:center}
+  
+  /* TESTIMONIALS */
+  .testimonials{padding:18px 0}
+  .testimonials-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+  .testimonial{background:linear-gradient(180deg,#fff,#fbfdff);padding:14px;border-radius:12px;box-shadow:var(--glass-shadow)}
+  .trust-strip{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .trust-item{background:var(--card);padding:8px 10px;border-radius:10px;box-shadow:var(--glass-shadow);font-weight:700;color:var(--muted)}
+  
+  /* GALLERY */
+  .gallery{padding:18px 0}
+  .insta-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}
+  .insta-item{height:150px;border-radius:12px;overflow:hidden;position:relative;cursor:pointer;background:#e9f4ff;display:flex;align-items:center;justify-content:center}
+  .insta-item img, .insta-item video{width:100%;height:100%;object-fit:cover;display:block}
+  .video-thumb video{filter:brightness(.9)}
+  .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(6,10,20,0.6);z-index:130;padding:14px}
+  .modal.open{display:flex}
+  .modal-content{background:#fff;border-radius:12px;max-width:940px;width:100%;padding:12px;position:relative;box-shadow:var(--shadow)}
+  .close{position:absolute;right:12px;top:10px;border:0;background:transparent;font-size:20px}
+  
+  /* FAQ */
+  .faq{padding:18px 0}
+  .faq-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+  .faq-grid h4{margin:0 0 6px}
+  
+  /* CONTACT */
+  .contact{padding:18px 0}
+  .contact-form{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+  .contact-form input,.contact-form textarea,.contact-form select{padding:12px;border-radius:10px;border:1px solid rgba(10,20,30,0.06);font-size:15px}
+  .contact-form textarea{min-height:110px}
+  .contact-legal{margin-top:12px;font-size:13px; color:var(--muted)}
+  
+  /* FOOTER */
+  .site-footer{padding:18px 0;background:linear-gradient(180deg,#fbfdff,#f7fbff);margin-top:18px}
+  .footer-inner{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+  
+  /* screens scaling */
+  @media (min-width:680px){
+    .wrap{padding:24px}
+    h1{font-size:28px}
+    .hero-media{height:300px}
+    .insta-grid{grid-template-columns:repeat(3,1fr)}
+    .packages-grid{grid-template-columns:repeat(2,1fr)}
+    .experiences-grid{grid-template-columns:repeat(3,1fr)}
+    .testimonials-grid{grid-template-columns:repeat(2,1fr)}
+    .contact-form{grid-template-columns:1fr 1fr}
+  }
+  
+  @media (min-width:1000px){
+    .wrap{padding:28px}
+    .navlinks{display:flex}
+    .hamburger{display:none}
+    .hero-grid{display:grid;grid-template-columns:1fr 480px;gap:28px;align-items:start}
+    .hero-section{padding:36px 0}
+    h1{font-size:40px}
+    .header-row{padding:16px 0}
+    .brand-name{font-size:18px}
+    .brand-sub{font-size:13px}
+    .packages-grid{grid-template-columns:repeat(3,1fr)}
+    .experiences-grid{grid-template-columns:repeat(4,1fr)}
+    .testimonials-grid{grid-template-columns:repeat(3,1fr)}
+    .insta-grid{grid-template-columns:repeat(4,1fr)}
+    .footer-inner{flex-direction:row;justify-content:space-between;align-items:center}
+    .hero-media{height:340px}
+    .pkg-card .ribbon{right:-36px;top:18px}
+    .pkg-card .ribbon-alt{right:-32px}
+  }
+  
+  @media (min-width:1300px){
+    .wrap{max-width:1280px}
+    h1{font-size:44px}
+    .hero-media{height:420px}
+  }
+
+
+  /* ====== RESPONSIVENESS FIXES (add to end of styles.css) ====== */
+
+/* safety: prevent any accidental horizontal overflow */
+html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* ensure wrap never creates horizontal overflow on small screens */
+  .wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  /* global images & videos */
+  img, video, picture, svg {
+    max-width: 100%;
+    width: 100%;
+    height: auto !important;
+    display: block;
+    object-fit: cover;
+  }
+  
+  /* grid items: ensure they shrink correctly */
+  .insta-grid, .packages-grid, .experiences-grid, .testimonials-grid, .faq-grid {
+    min-width: 0; /* allows flex/grid children to shrink */
+  }
+  
+  /* columns that used fixed pixel width on some breakpoints: override on small screens */
+  .hero-grid, .hero-right, .hero-left {
+    min-width: 0;
+    width: 100%;
+  }
+  
+  /* use aspect-ratio for hero media so height is proportional and doesn't overflow */
+  .hero-media {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* keeps consistent height on narrow screens */
+    max-height: calc(100vh * 0.45); /* prevent hero being too tall on small viewports */
+  }
+  
+  /* cards / package items: avoid forcing big min-widths */
+  .pkg-card, .pkg-card *, .insta-item, .testimonial, .exp-card {
+    min-width: 0;
+  }
+  
+  /* ensure header/nav does not overflow */
+  .header-row {
+    gap: 12px;
+    align-items: center;
+  }
+  .navlinks {
+    flex-wrap: wrap;
+  }
+  
+  /* reduce large paddings that can push layout wider on tiny screens */
+  @media (max-width:420px){
+    .wrap{padding-left:12px;padding-right:12px}
+    .hero-media{aspect-ratio: 4 / 3}
+    .insta-item{height:130px}
+    .brand-name{font-size:14px}
+    .brand-sub{font-size:11px}
+    .btn{padding:10px 12px}
+  }
+  
+  /* if any element still causes overflow, this will visually reveal it for debugging */
+  /* remove or comment out the following block once fixed */
+  .debug-overflow * {
+    outline: none;
+  }
