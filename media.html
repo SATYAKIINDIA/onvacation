@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OnVacation — Media</title>
+  <meta name="description" content="Photo and video gallery — real traveller moments, curated by OnVacation." />
+  <link rel="stylesheet" href="styles.css?v=20250913">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">OV</div>
+        <div class="brand-text">
+          <div class="brand-name">OnVacation</div>
+          <div class="brand-sub">Media</div>
+        </div>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary" id="primary-nav">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="media.html" aria-current="page">Media</a>
+        <a href="blogs.html">Blog</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+      </nav>
+
+      <button class="hamburger" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="media.html" aria-current="page">Media</a>
+      <a href="blogs.html">Blog</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap gallery" aria-labelledby="media-heading">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <h1 id="media-heading" style="margin:0 0 6px">Photos & Videos</h1>
+          <p class="muted" style="margin:0">Explore highlights from our travellers — filter by photos or videos, search by tag.</p>
+        </div>
+
+        <div style="display:flex;gap:8px;align-items:center">
+          <a class="btn btn-ghost" href="index.html">Back</a>
+          <a class="btn btn-primary" href="contact.html">Get a Quote</a>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <div style="display:flex;gap:8px;align-items:center">
+          <label for="media-type" class="small muted" style="margin-right:6px">Show</label>
+          <select id="media-type" aria-label="Filter media type">
+            <option value="all">All</option>
+            <option value="photo">Photos</option>
+            <option value="video">Videos</option>
+          </select>
+        </div>
+
+        <div style="flex:1">
+          <input id="media-search" type="search" placeholder="Search tags (beach, desert, mountains...)" aria-label="Search media" style="padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);width:100%">
+        </div>
+
+        <div>
+          <button id="clearMediaFilters" class="btn btn-ghost">Clear</button>
+        </div>
+      </div>
+
+      <!-- Gallery grid -->
+      <div id="mediaGrid" class="insta-grid" style="margin-top:12px">
+        <!-- sample photos -->
+        <div class="insta-item" data-type="photo" data-tags="desert sunset rajasthan" tabindex="0" role="button" aria-label="Open photo: Desert sunset">
+          <img loading="lazy" alt="Desert sunset" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+        <div class="insta-item" data-type="photo" data-tags="houseboat alleppey kerala" tabindex="0" role="button" aria-label="Open photo: Houseboat backwaters">
+          <img loading="lazy" alt="Houseboat backwaters" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+        <div class="insta-item video-thumb" data-type="video" data-tags="beach waves goa" tabindex="0" role="button" aria-label="Open video: Beach waves">
+          <video muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
+            <source src="https://player.vimeo.com/external/389850909.sd.mp4?s=5e27da77928b8f6ab3a5b596d68d1a317f6dfb2f&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="insta-item" data-type="photo" data-tags="market evening udaipur" tabindex="0" role="button" aria-label="Open photo: Evening market">
+          <img loading="lazy" alt="Evening market" src="https://images.unsplash.com/photo-1517861281961-7f7f9d8c4d5e?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+        <div class="insta-item" data-type="photo" data-tags="tea garden mornings kerala" tabindex="0" role="button" aria-label="Open photo: Tea garden mornings">
+          <img loading="lazy" alt="Tea garden mornings" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+        <div class="insta-item video-thumb" data-type="video" data-tags="river flow mountains" tabindex="0" role="button" aria-label="Open video: River flow">
+          <video muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?q=80&w=1200&auto=format&fit=crop">
+            <source src="https://player.vimeo.com/external/378340068.sd.mp4?s=f62c345d0ee00f6ebf0d24a5a014c5fae70c6fa7&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="insta-item" data-type="photo" data-tags="palace udaipur heritage" tabindex="0" role="button" aria-label="Open photo: Udaipur palace">
+          <img loading="lazy" alt="Udaipur palace" src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+        <div class="insta-item" data-type="photo" data-tags="camel ride desert" tabindex="0" role="button" aria-label="Open photo: Camel ride">
+          <img loading="lazy" alt="Camel ride" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+        <div class="insta-item" data-type="photo" data-tags="mountain sunrise himachal" tabindex="0" role="button" aria-label="Open photo: Mountain sunrise">
+          <img loading="lazy" alt="Mountain sunrise" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3">
+        </div>
+
+        <!-- add more items as needed -->
+      </div>
+
+      <div style="margin-top:12px;text-align:center">
+        <button id="loadMoreMedia" class="btn btn-ghost">Load more</button>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX / MEDIA PREVIEW -->
+    <div id="mediaLightbox" class="modal" aria-hidden="true" role="dialog" aria-label="Media preview">
+      <div class="modal-content" role="document" style="max-width:900px">
+        <button class="close" aria-label="Close">✕</button>
+        <div id="mediaInner"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+          <div id="mediaCaption" class="muted small"></div>
+          <div>
+            <button id="prevMedia" class="btn btn-ghost" aria-label="Previous">‹</button>
+            <button id="nextMedia" class="btn btn-ghost" aria-label="Next">›</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer" style="margin-top:18px">
+      <div class="wrap footer-inner">
+        <div>
+          <strong>OnVacation</strong>
+          <div class="muted">Curated travel packages · Trusted experiences</div>
+        </div>
+        <div class="muted">© <span id="year"></span> OnVacation</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- page script: filtering + lightbox handling -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+      // footer year
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      const typeSel = document.getElementById('media-type');
+      const search = document.getElementById('media-search');
+      const clearBtn = document.getElementById('clearMediaFilters');
+      const grid = document.getElementById('mediaGrid');
+      const items = Array.from(grid.querySelectorAll('.insta-item'));
+      const loadMore = document.getElementById('loadMoreMedia');
+
+      function matchesItem(it, term, type) {
+        // type check
+        if (type && type !== 'all') {
+          if (it.dataset.type !== type) return false;
+        }
+        // search in tags or alt text
+        if (term) {
+          const tags = (it.dataset.tags || '').toLowerCase();
+          const alt = (it.querySelector('img')?.alt || it.querySelector('video')?.getAttribute('poster') || '').toString().toLowerCase();
+          if (!tags.includes(term) && !alt.includes(term)) return false;
+        }
+        return true;
+      }
+
+      function applyFilters() {
+        const t = (typeSel.value || 'all').toLowerCase();
+        const q = (search.value || '').trim().toLowerCase();
+        items.forEach(i => {
+          i.style.display = matchesItem(i, q, t) ? '' : 'none';
+        });
+      }
+
+      typeSel?.addEventListener('change', applyFilters);
+      search?.addEventListener('input', () => {
+        clearTimeout(window._mediaSearchT);
+        window._mediaSearchT = setTimeout(applyFilters, 160);
+      });
+      clearBtn?.addEventListener('click', () => {
+        typeSel.value = 'all';
+        search.value = '';
+        applyFilters();
+      });
+
+      // Lightbox logic
+      const lightbox = document.getElementById('mediaLightbox');
+      const inner = document.getElementById('mediaInner');
+      const caption = document.getElementById('mediaCaption');
+      const closeBtn = lightbox.querySelector('.close');
+      const prevBtn = document.getElementById('prevMedia');
+      const nextBtn = document.getElementById('nextMedia');
+
+      let currentIndex = -1;
+      let visibleList = items.slice(); // filtered order (keeps full list by default)
+
+      function rebuildVisibleList() {
+        visibleList = Array.from(grid.querySelectorAll('.insta-item')).filter(el => el.style.display !== 'none');
+      }
+
+      function openLightboxByIndex(i) {
+        if (i < 0 || i >= visibleList.length) return;
+        const el = visibleList[i];
+        currentIndex = i;
+        const type = el.dataset.type;
+        const tags = el.dataset.tags || '';
+        caption.textContent = tags;
+
+        if (type === 'photo') {
+          const img = el.querySelector('img');
+          const src = img ? img.src : '';
+          inner.innerHTML = `<img src="${src}" alt="${img?.alt||''}" style="width:100%;border-radius:10px">`;
+        } else {
+          // video
+          const vid = el.querySelector('video');
+          const source = vid ? vid.querySelector('source')?.src || '' : '';
+          inner.innerHTML = `<video controls autoplay style="width:100%;border-radius:10px;max-height:70vh"><source src="${source}" type="video/mp4"></video>`;
+        }
+
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden','false');
+        // pause inline videos
+        document.querySelectorAll('.insta-item video').forEach(v => tryPause(v));
+        // focus close btn for keyboard users
+        closeBtn?.focus();
+      }
+
+      function tryPause(v) { try{ v.pause(); }catch(e){} }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden','true');
+        inner.innerHTML = '';
+      }
+
+      // attach click handlers to items (and keyboard)
+      items.forEach((el, idx) => {
+        el.addEventListener('click', () => {
+          rebuildVisibleList();
+          const pos = visibleList.indexOf(el);
+          openLightboxByIndex(pos);
+        });
+        el.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            rebuildVisibleList();
+            const pos = visibleList.indexOf(el);
+            openLightboxByIndex(pos);
+          }
+        });
+      });
+
+      prevBtn?.addEventListener('click', () => {
+        if (currentIndex > 0) openLightboxByIndex(currentIndex - 1);
+      });
+      nextBtn?.addEventListener('click', () => {
+        if (currentIndex < visibleList.length - 1) openLightboxByIndex(currentIndex + 1);
+      });
+
+      closeBtn?.addEventListener('click', closeLightbox);
+      lightbox?.addEventListener('click', (ev) => { if (ev.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Escape') closeLightbox();
+        if (ev.key === 'ArrowLeft') prevBtn?.click();
+        if (ev.key === 'ArrowRight') nextBtn?.click();
+      });
+
+      // Load more: demo clones first items (replace with AJAX in production)
+      loadMore?.addEventListener('click', () => {
+        const clones = items.slice(0,3).map(n => {
+          const c = n.cloneNode(true);
+          // reattach listeners
+          c.addEventListener('click', () => {
+            rebuildVisibleList();
+            const pos = Array.from(grid.querySelectorAll('.insta-item')).indexOf(c);
+            openLightboxByIndex(pos);
+          });
+          c.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); rebuildVisibleList(); const pos = Array.from(grid.querySelectorAll('.insta-item')).indexOf(c); openLightboxByIndex(pos); } });
+          return c;
+        });
+        clones.forEach(c => grid.appendChild(c));
+        // update items array reference
+        // Note: for simplicity we do not update the 'items' array captured earlier; rebuildVisibleList uses live DOM queries
+      });
+
+      // IntersectionObserver: lazy preload videos when visible (mobile data savings)
+      const videoElems = document.querySelectorAll('.insta-item video');
+      if ('IntersectionObserver' in window && videoElems.length) {
+        const io = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            const v = entry.target;
+            if (entry.isIntersecting) {
+              if (v.getAttribute('preload') !== 'auto') v.setAttribute('preload', 'auto');
+              v.play().catch(()=>{/* ignore autoplay block */});
+            } else {
+              v.pause();
+            }
+          });
+        }, { threshold: 0.5 });
+        videoElems.forEach(v => io.observe(v));
+      }
+
+      // initial filter (in case defaults not "all")
+      applyFilters();
+
+    });
+  </script>
+
+  <script src="scripts.js?v=20250913" defer></script>
+</body>
+</html>

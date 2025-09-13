@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact OnVacation — Request Quote & Support</title>
+  <meta name="description" content="Get in touch with OnVacation. Request a custom quote, ask about packages, or connect with our travel team for support." />
+  <link rel="stylesheet" href="styles.css?v=20250913">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">OV</div>
+        <div class="brand-text">
+          <div class="brand-name">OnVacation</div>
+          <div class="brand-sub">Contact</div>
+        </div>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary" id="primary-nav">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="media.html">Media</a>
+        <a href="blogs.html">Blog</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html" aria-current="page" class="btn btn-primary">Contact</a>
+      </nav>
+
+      <button class="hamburger" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="media.html">Media</a>
+      <a href="blogs.html">Blog</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" class="btn btn-primary">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap contact" aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Let’s craft your trip</h1>
+      <p class="muted">Tell us where you’d like to go, when, and with whom — our team will reply within 24 hours with options tailored to you.</p>
+
+      <form id="contactForm" class="contact-form" style="margin-top:12px" onsubmit="event.preventDefault(); alert('Thanks — we will contact you soon!');">
+        <input name="name" placeholder="Full name" required>
+        <input name="email" placeholder="Email" type="email" required>
+        <input name="phone" placeholder="Phone (optional)">
+        <select name="package">
+          <option value="">Interested in</option>
+          <option>Rajasthan Royal Heritage</option>
+          <option>Rajasthan Highlights</option>
+          <option>Kerala Backwaters</option>
+          <option>Himachal Escape</option>
+          <option>Family Fun Pack</option>
+          <option>Bespoke Event</option>
+        </select>
+        <textarea name="message" placeholder="Tell us your dates, travellers, budget, and vibe (luxury / adventure / family)" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Request Quote</button>
+      </form>
+
+      <div class="contact-legal muted" style="margin-top:12px">
+        <p><strong>Call us:</strong> +91 98xxxxxxx</p>
+        <p><strong>Email:</strong> support@onvacation.example</p>
+        <p><strong>Office:</strong> Jaipur, Rajasthan, India</p>
+        <p><strong>GST:</strong> 12ABCDE3456F7Z</p>
+      </div>
+
+      <div class="trust-strip" style="margin-top:18px">
+        <div class="trust-item">🛡️ Secure booking</div>
+        <div class="trust-item">✅ Verified partners</div>
+        <div class="trust-item">📞 24/7 local support</div>
+        <div class="trust-item">⭐ Trusted by families</div>
+      </div>
+    </section>
+
+    <!-- Optional map embed -->
+    <section class="wrap" style="margin-top:18px">
+      <h2>Find us</h2>
+      <div style="margin-top:8px;border-radius:12px;overflow:hidden;box-shadow:var(--glass-shadow)">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.888128395179!2d75.7872701150431!3d26.912433983133424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db4002f08b5db%3A0x6d0e7b76f1bfb1a2!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1618305643432!5m2!1sen!2sin" 
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <footer class="site-footer" style="margin-top:18px">
+      <div class="wrap footer-inner">
+        <div>
+          <strong>OnVacation</strong>
+          <div class="muted">Curated travel packages · Trusted experiences</div>
+        </div>
+        <div class="muted">© <span id="year"></span> OnVacation</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="scripts.js?v=20250913" defer></script>
+</body>
+</html>

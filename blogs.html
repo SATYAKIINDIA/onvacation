@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OnVacation — Blog</title>
+  <meta name="description" content="OnVacation travel blog — destination guides, packing tips, travel stories and offers." />
+  <link rel="stylesheet" href="styles.css?v=20250913">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">OV</div>
+        <div class="brand-text">
+          <div class="brand-name">OnVacation</div>
+          <div class="brand-sub">Blog</div>
+        </div>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary" id="primary-nav">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="media.html">Media</a>
+        <a href="blogs.html" aria-current="page">Blog</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+      </nav>
+
+      <button class="hamburger" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="media.html">Media</a>
+      <a href="blogs.html" aria-current="page">Blog</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap blog-preview" aria-labelledby="blog-heading">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <h1 id="blog-heading" style="margin:0 0 6px">Travel stories & guides</h1>
+          <p class="muted" style="margin:0">Destination guides, packing lists, travel tips and OnVacation stories.</p>
+        </div>
+
+        <div style="display:flex;gap:8px;align-items:center">
+          <a class="btn btn-ghost" href="index.html">Back</a>
+          <a class="btn btn-primary" href="contact.html">Work with us</a>
+        </div>
+      </div>
+
+      <!-- search & tags -->
+      <div style="margin-top:12px;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center">
+        <input id="blogSearch" type="search" placeholder="Search posts (e.g., Udaipur, packing, monsoon)" aria-label="Search blog" style="padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);width:100%">
+
+        <div style="display:flex;gap:8px">
+          <select id="blogTag" aria-label="Filter by tag">
+            <option value="">All tags</option>
+            <option value="udaipur">Udaipur</option>
+            <option value="packing">Packing</option>
+            <option value="kerala">Kerala</option>
+            <option value="family">Family trips</option>
+          </select>
+          <button id="clearBlogFilters" class="btn btn-ghost">Clear</button>
+        </div>
+      </div>
+
+      <!-- posts list -->
+      <div id="postsList" style="margin-top:12px;display:grid;gap:12px">
+        <!-- each post card links to a dedicated post page (blog-post.html?slug=...) -->
+        <article class="pkg-card" data-tags="udaipur,guide" tabindex="0">
+          <h3><a href="blog-post.html?slug=5-must-see-udaipur">5 must-see spots in Udaipur</a></h3>
+          <div class="small muted">By OnVacation · Sep 1, 2025 · <span class="muted">4 min read</span></div>
+          <p class="muted" style="margin-top:8px">Local tips for the City of Lakes — best times to visit, photo spots and where to eat.</p>
+          <div style="margin-top:8px;display:flex;gap:8px">
+            <a class="btn btn-ghost" href="blog-post.html?slug=5-must-see-udaipur">Read</a>
+            <a class="btn btn-primary" href="contact.html">Ask about this itinerary</a>
+          </div>
+        </article>
+
+        <article class="pkg-card" data-tags="packing,monsoon" tabindex="0">
+          <h3><a href="blog-post.html?slug=packing-for-monsoon">Packing for monsoon travel — smart tips</a></h3>
+          <div class="small muted">By OnVacation · Aug 15, 2025 · <span class="muted">3 min read</span></div>
+          <p class="muted" style="margin-top:8px">Essentials and hacks to keep your trip comfortable and dry during monsoon season.</p>
+          <div style="margin-top:8px;display:flex;gap:8px">
+            <a class="btn btn-ghost" href="blog-post.html?slug=packing-for-monsoon">Read</a>
+            <a class="btn btn-primary" href="contact.html">Customize a monsoon trip</a>
+          </div>
+        </article>
+
+        <article class="pkg-card" data-tags="kerala,wellness" tabindex="0">
+          <h3><a href="blog-post.html?slug=kerala-backwaters-guide">Kerala backwaters & wellness: a short guide</a></h3>
+          <div class="small muted">By OnVacation · Jul 27, 2025 · <span class="muted">5 min read</span></div>
+          <p class="muted" style="margin-top:8px">What to expect on a houseboat, choosing an Ayurveda treatment and local flavors to try.</p>
+          <div style="margin-top:8px;display:flex;gap:8px">
+            <a class="btn btn-ghost" href="blog-post.html?slug=kerala-backwaters-guide">Read</a>
+            <a class="btn btn-primary" href="contact.html">Ask about Kerala packages</a>
+          </div>
+        </article>
+
+        <!-- more posts can be appended -->
+      </div>
+
+      <div style="margin-top:12px;text-align:center">
+        <button id="loadMorePosts" class="btn btn-ghost">Load more posts</button>
+      </div>
+
+    </section>
+
+    <footer class="site-footer" style="margin-top:18px">
+      <div class="wrap footer-inner">
+        <div>
+          <strong>OnVacation</strong>
+          <div class="muted">Curated travel packages · Trusted experiences</div>
+        </div>
+        <div class="muted">© <span id="year"></span> OnVacation</div>
+      </div>
+    </footer>
+  </main>
+
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      const search = document.getElementById('blogSearch');
+      const tag = document.getElementById('blogTag');
+      const clear = document.getElementById('clearBlogFilters');
+      const posts = Array.from(document.querySelectorAll('#postsList article'));
+
+      function matches(post) {
+        const q = (search.value || '').trim().toLowerCase();
+        const t = (tag.value || '').trim().toLowerCase();
+        if (t && !(post.dataset.tags || '').toLowerCase().includes(t)) return false;
+        if (q) {
+          const text = (post.textContent || '').toLowerCase();
+          if (!text.includes(q)) return false;
+        }
+        return true;
+      }
+
+      function apply() {
+        posts.forEach(p => p.style.display = matches(p) ? '' : 'none');
+      }
+
+      search?.addEventListener('input', () => {
+        clearTimeout(window._blogT); window._blogT = setTimeout(apply, 160);
+      });
+      tag?.addEventListener('change', apply);
+      clear?.addEventListener('click', () => { tag.value=''; search.value=''; apply(); });
+
+      // load more demo (clones existing posts)
+      document.getElementById('loadMorePosts')?.addEventListener('click', () => {
+        const list = document.getElementById('postsList');
+        const clone = posts[0].cloneNode(true);
+        clone.querySelectorAll('a').forEach(a => {
+          // remove potential duplicate anchors' hrefs or adjust
+        });
+        list.appendChild(clone);
+      });
+    });
+  </script>
+
+  <script src="scripts.js?v=20250913" defer></script>
+</body>
+</html>

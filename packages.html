@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OnVacation — Packages</title>
+  <meta name="description" content="Browse curated travel packages from OnVacation — family, luxury and adventure tours across India." />
+  <link rel="stylesheet" href="styles.css?v=20250913">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">OV</div>
+        <div class="brand-text">
+          <div class="brand-name">OnVacation</div>
+          <div class="brand-sub">Packages</div>
+        </div>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary" id="primary-nav">
+        <a href="index.html">Home</a>
+        <a href="packages.html" aria-current="page">Packages</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="media.html">Media</a>
+        <a href="blogs.html">Blog</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+      </nav>
+
+      <button class="hamburger" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="packages.html" aria-current="page">Packages</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="media.html">Media</a>
+      <a href="blogs.html">Blog</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap packages" aria-labelledby="packages-heading">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <h1 id="packages-heading" style="margin:0 0 6px">Packages</h1>
+          <p class="muted" style="margin:0">Filter by duration, theme or price to find the right trip.</p>
+        </div>
+
+        <div style="display:flex;gap:8px;align-items:center">
+          <a class="btn btn-ghost" href="index.html">Back</a>
+          <a class="btn btn-primary" href="contact.html">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- FILTERS -->
+      <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+        <select id="filter-duration" aria-label="Filter by duration">
+          <option value="">Any duration</option>
+          <option value="3-4">3-4 days</option>
+          <option value="5-7">5-7 days</option>
+          <option value="8+">8+ days</option>
+        </select>
+
+        <select id="filter-theme" aria-label="Filter by theme">
+          <option value="">Any theme</option>
+          <option value="luxury">Luxury</option>
+          <option value="family">Family</option>
+          <option value="wellness">Wellness</option>
+          <option value="adventure">Adventure</option>
+          <option value="bespoke">Bespoke</option>
+        </select>
+      </div>
+
+      <!-- PRICE SLIDER / quick buckets -->
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-ghost quick-price" data-price="0-12500">Under ₹12.5k</button>
+        <button class="btn btn-ghost quick-price" data-price="12500-25000">₹12.5k–25k</button>
+        <button class="btn btn-ghost quick-price" data-price="25000-999999">Above ₹25k</button>
+        <button class="btn btn-ghost" id="clearFilters" style="margin-left:auto">Clear filters</button>
+      </div>
+
+      <!-- PACKAGES GRID -->
+      <div id="packagesGrid" class="packages-grid" style="margin-top:14px">
+        <!-- card sample: include data-* attributes for filtering -->
+        <article class="pkg-card" data-duration="5-7" data-theme="classic" data-price="12499" tabindex="0" aria-labelledby="p1">
+          <h3 id="p1">Rajasthan Highlights — 7 days</h3>
+          <p class="meta muted">Udaipur • Jodhpur • Jaisalmer</p>
+          <p class="muted" style="margin-top:6px">Heritage hotels, desert camp night, city tours and cultural experiences.</p>
+          <div class="pkg-bottom" style="margin-top:10px">
+            <div>
+              <div class="price">₹12,499</div>
+              <div class="small muted">per person</div>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-ghost view-detail" data-id="pkg-raj7">Details</button>
+              <a class="btn btn-primary" href="contact.html">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pkg-card" data-duration="5-7" data-theme="wellness" data-price="16250" tabindex="0" aria-labelledby="p2">
+          <h3 id="p2">Kerala Backwaters & Wellness — 6 days</h3>
+          <p class="meta muted">Cochin • Alleppey • Houseboat</p>
+          <p class="muted" style="margin-top:6px">Private houseboat, Ayurveda spa, tea gardens and local cuisine.</p>
+          <div class="pkg-bottom" style="margin-top:10px">
+            <div>
+              <div class="price">₹16,250</div>
+              <div class="small muted">per person</div>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-ghost view-detail" data-id="pkg-ker6">Details</button>
+              <a class="btn btn-primary" href="contact.html">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pkg-card" data-duration="6" data-theme="adventure" data-price="14750" tabindex="0" aria-labelledby="p3">
+          <h3 id="p3">Himachal Scenic Escape — 6 days</h3>
+          <p class="meta muted">Shimla • Manali • Solang Valley</p>
+          <p class="muted" style="margin-top:6px">Scenic drives, village experiences and optional adventure add-ons.</p>
+          <div class="pkg-bottom" style="margin-top:10px">
+            <div>
+              <div class="price">₹14,750</div>
+              <div class="small muted">per person</div>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-ghost view-detail" data-id="pkg-him6">Details</button>
+              <a class="btn btn-primary" href="contact.html">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pkg-card" data-duration="9" data-theme="luxury" data-price="39999" tabindex="0" aria-labelledby="p4">
+          <div class="ribbon" aria-hidden="true">Luxury</div>
+          <h3 id="p4">Rajasthan Royal Heritage — 9 days</h3>
+          <p class="meta muted">Udaipur • Jodhpur • Jaisalmer • Fort dinner</p>
+          <p class="muted" style="margin-top:6px">Luxury heritage hotels, private guides, royal dining and desert experiences.</p>
+          <div class="pkg-bottom" style="margin-top:10px">
+            <div>
+              <div class="price">₹39,999</div>
+              <div class="small muted">per person</div>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-ghost view-detail" data-id="pkg-raj9">Details</button>
+              <a class="btn btn-primary" href="contact.html">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pkg-card" data-duration="5" data-theme="family" data-price="11499" tabindex="0" aria-labelledby="p5">
+          <h3 id="p5">Family Fun Pack — 5 days</h3>
+          <p class="meta muted">Kid-friendly itineraries & activities</p>
+          <p class="muted" style="margin-top:6px">Theme activities, safe transfers, family rooms and free stays for kids under 5.</p>
+          <div class="pkg-bottom" style="margin-top:10px">
+            <div>
+              <div class="price">₹11,499</div>
+              <div class="small muted">per person</div>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-ghost view-detail" data-id="pkg-family5">Details</button>
+              <a class="btn btn-primary" href="contact.html">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pkg-card" data-duration="3-4" data-theme="bespoke" data-price="0" tabindex="0" aria-labelledby="p6">
+          <h3 id="p6">Bespoke Events & Celebrations</h3>
+          <p class="meta muted">Weddings · Anniversaries · Private parties</p>
+          <p class="muted" style="margin-top:6px">Custom events — we handle logistics, venues and entertainment.</p>
+          <div class="pkg-bottom" style="margin-top:10px">
+            <div>
+              <div class="small muted">Price on request</div>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-ghost view-detail" data-id="pkg-bespoke">Details</button>
+              <a class="btn btn-primary" href="contact.html">Plan Event</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Pagination / load more -->
+      <div style="margin-top:14px;text-align:center">
+        <button id="loadMore" class="btn btn-ghost">Load more packages</button>
+      </div>
+    </section>
+
+    <!-- PACKAGE DETAIL MODAL -->
+    <div id="pkgModal" class="modal" aria-hidden="true" role="dialog" aria-label="Package details">
+      <div class="modal-content" role="document">
+        <button class="close" aria-label="Close">✕</button>
+        <div id="pkgModalInner"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer" style="margin-top:18px">
+      <div class="wrap footer-inner">
+        <div>
+          <strong>OnVacation</strong>
+          <div class="muted">Curated travel packages · Trusted experiences</div>
+        </div>
+        <div class="muted">© <span id="year"></span> OnVacation</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- small client-side filter & modal script -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+      // keep year in footer
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      // filter elements
+      const durationSel = document.getElementById('filter-duration');
+      const themeSel = document.getElementById('filter-theme');
+      const quickBtns = document.querySelectorAll('.quick-price');
+      const clearBtn = document.getElementById('clearFilters');
+      const packagesGrid = document.getElementById('packagesGrid');
+      const items = Array.from(packagesGrid.querySelectorAll('.pkg-card'));
+
+      function parseRange(rangeStr) {
+        if (!rangeStr) return null;
+        if (rangeStr.includes('-')) {
+          const [a,b] = rangeStr.split('-').map(s => parseInt(s,10));
+          return {min:a, max:b || Infinity};
+        }
+        return null;
+      }
+
+      function appliesFilter(item) {
+        const durFilter = durationSel.value;
+        const themeFilter = themeSel.value;
+        const priceFilter = document.querySelector('.quick-price.active')?.dataset.price || '';
+
+        // duration check
+        if (durFilter) {
+          const itemDur = item.dataset.duration || '';
+          // simple matching for ranges or exact numbers
+          if (durFilter.includes('-')) {
+            // example "5-7"
+            if (itemDur !== durFilter && !itemDur.startsWith(durFilter)) {
+              // try to interpret numeric overlap
+              const itemVal = itemDur.includes('-') ? parseInt(itemDur.split('-')[0]) : parseInt(itemDur) || 0;
+              const [fmin,fmax] = durFilter.split('-').map(n=>parseInt(n,10));
+              if (!(itemVal >= fmin && itemVal <= fmax)) return false;
+            }
+          } else {
+            if (!(item.dataset.duration && item.dataset.duration.toString().startsWith(durFilter))) return false;
+          }
+        }
+
+        // theme check (loose contains)
+        if (themeFilter) {
+          const itemTheme = (item.dataset.theme || '').toLowerCase();
+          if (!itemTheme.includes(themeFilter.toLowerCase())) return false;
+        }
+
+        // price check (quick buttons)
+        if (priceFilter) {
+          const [minS,maxS] = priceFilter.split('-');
+          const min = parseInt(minS,10) || 0;
+          const max = parseInt(maxS,10) || Infinity;
+          const p = parseInt(item.dataset.price,10) || 0;
+          if (p < min || p > max) return false;
+        }
+
+        return true;
+      }
+
+      function applyFilters() {
+        items.forEach(it => {
+          it.style.display = appliesFilter(it) ? '' : 'none';
+        });
+      }
+
+      // events
+      durationSel?.addEventListener('change', applyFilters);
+      themeSel?.addEventListener('change', applyFilters);
+      quickBtns.forEach(b => {
+        b.addEventListener('click', () => {
+          quickBtns.forEach(x => x.classList.remove('active'));
+          if (b.classList.contains('active')) {
+            b.classList.remove('active');
+          } else {
+            b.classList.add('active');
+          }
+          applyFilters();
+        });
+      });
+      clearBtn?.addEventListener('click', () => {
+        durationSel.value = '';
+        themeSel.value = '';
+        quickBtns.forEach(x => x.classList.remove('active'));
+        applyFilters();
+      });
+
+      // view detail modal
+      const modal = document.getElementById('pkgModal');
+      const modalInner = document.getElementById('pkgModalInner');
+      const closeBtn = modal.querySelector('.close');
+
+      function openPkgDetail(id){
+        // lightweight dataset catalogue
+        const catalog = {
+          "pkg-raj7": {
+            title: "Rajasthan Highlights — 7 days",
+            price: "₹12,499 / person",
+            days: "7 days",
+            overview: "Heritage hotels, desert camp, guided city tours and cultural experiences.",
+            inclusions: ["4★ hotels", "Private car & driver", "Breakfast & selected meals", "Local guide"],
+            itinerary: [
+              "Day 1 — Arrival Udaipur: City tour and palace visit",
+              "Day 2 — Udaipur to Jodhpur: Mehrangarh fort",
+              "Day 3 — Jaisalmer: Desert camp & cultural evening",
+              "Day 4 — Jaisalmer: Fort tour & markets",
+              "Day 5-7 — Return & departures"
+            ]
+          },
+          "pkg-ker6": {
+            title: "Kerala Backwaters & Wellness — 6 days",
+            price: "₹16,250 / person",
+            days: "6 days",
+            overview: "Private houseboat, Ayurvedic spa experiences and tea garden visits.",
+            inclusions: ["Houseboat night", "Ayurvedic spa session", "Private transfers", "Local culinary experience"],
+            itinerary: [
+              "Day 1 — Cochin arrival & local evening",
+              "Day 2 — Alleppey houseboat overnight",
+              "Day 3 — Kumarakom / tea gardens",
+              "Day 4-6 — Leisure & departure"
+            ]
+          },
+          "pkg-him6": {
+            title: "Himachal Scenic Escape — 6 days",
+            price: "₹14,750 / person",
+            days: "6 days",
+            overview: "Mountain stays, scenic drives and easy treks with village experiences.",
+            inclusions: ["Mountain hotels", "Guided treks", "Private transfers"],
+            itinerary: ["Day 1 — Shimla arrival", "Day 2 — Local sights", "Day 3 — Manali transfer", "Day 4-6 — Solang valley & departure"]
+          },
+          "pkg-raj9": {
+            title: "Rajasthan Royal Heritage — 9 days",
+            price: "₹39,999 / person",
+            days: "9 days",
+            overview: "Luxury heritage hotels, private guides, royal dining and desert experiences.",
+            inclusions: ["Luxury hotels", "Private guides", "Premium transfers", "Royal dining experience"],
+            itinerary: ["Days 1-9 — curated royal route across Rajasthan"]
+          },
+          "pkg-family5": {
+            title: "Family Fun Pack — 5 days",
+            price: "₹11,499 / person",
+            days: "5 days",
+            overview: "Family-friendly hotels, theme activities and kid-friendly experiences.",
+            inclusions: ["Family rooms", "Kid activities", "Safe transfers"],
+            itinerary: ["Day 1 — Arrival & family activities", "Days 2-4 — curated family experiences", "Day 5 — departure"]
+          },
+          "pkg-bespoke": {
+            title: "Bespoke Events & Celebrations",
+            price: "Price on request",
+            days: "Custom",
+            overview: "Weddings, anniversaries, private parties — fully bespoke planning & execution.",
+            inclusions: ["Venue sourcing", "Event management", "Entertainment & logistics"],
+            itinerary: ["Custom timeline designed with you"]
+          }
+        };
+
+        const data = catalog[id];
+        if (!data) {
+          modalInner.innerHTML = "<p>Details coming soon.</p>";
+        } else {
+          modalInner.innerHTML = `
+            <h3 style="margin-top:0">${data.title}</h3>
+            <div style="display:flex;justify-content:space-between;gap:12px;align-items:center">
+              <div><strong>${data.price}</strong><div class="small muted">${data.days}</div></div>
+              <div><a class="btn btn-primary" href="contact.html">Request Quote</a></div>
+            </div>
+            <p class="muted" style="margin-top:10px">${data.overview}</p>
+            <h4 style="margin-top:12px">What's included</h4>
+            <ul>${data.inclusions.map(i=>`<li class="muted">${i}</li>`).join('')}</ul>
+            <h4 style="margin-top:10px">Sample itinerary</h4>
+            <ol>${data.itinerary.map(s=>`<li class="muted">${s}</li>`).join('')}</ol>
+            <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+              <a class="btn btn-primary" href="contact.html">Request Quote</a>
+              <a class="btn btn-ghost" href="contact.html">Ask a question</a>
+            </div>
+          `;
+        }
+
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        // set focus
+        modal.querySelector('.close')?.focus();
+      }
+
+      // wire detail buttons
+      document.querySelectorAll('.view-detail').forEach(b=>{
+        b.addEventListener('click', ()=> {
+          openPkgDetail(b.dataset.id);
+        });
+      });
+
+      // modal close logic
+      closeBtn?.addEventListener('click', ()=> {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden','true');
+        modalInner.innerHTML = '';
+      });
+      modal?.addEventListener('click', (ev)=> { if (ev.target === modal) { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); modalInner.innerHTML=''; }});
+      document.addEventListener('keydown', (ev)=> { if (ev.key === 'Escape') { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); modalInner.innerHTML=''; }});
+
+      // load more: for skeleton demo this will clone items (in real site request server/page)
+      const loadMore = document.getElementById('loadMore');
+      loadMore?.addEventListener('click', ()=> {
+        // simple duplication demo: clone first 3 cards and append
+        const clones = items.slice(0,3).map(n=>n.cloneNode(true));
+        clones.forEach(c => {
+          packagesGrid.appendChild(c);
+          // reattach view-detail click handlers on cloned node
+          c.querySelectorAll('.view-detail').forEach(b=>{
+            b.addEventListener('click', ()=> openPkgDetail(b.dataset.id));
+          });
+        });
+      });
+
+    });
+  </script>
+
+  <script src="scripts.js?v=20250913" defer></script>
+</body>
+</html>

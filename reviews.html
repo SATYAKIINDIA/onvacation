@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OnVacation — Reviews & Testimonials</title>
+  <meta name="description" content="Read traveller reviews for OnVacation — family trips, luxury packages and bespoke events. See ratings and add your review." />
+  <link rel="stylesheet" href="styles.css?v=20250913">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">OV</div>
+        <div class="brand-text">
+          <div class="brand-name">OnVacation</div>
+          <div class="brand-sub">Reviews</div>
+        </div>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary" id="primary-nav">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="media.html">Media</a>
+        <a href="blogs.html">Blog</a>
+        <a href="reviews.html" aria-current="page">Reviews</a>
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+      </nav>
+
+      <button class="hamburger" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="media.html">Media</a>
+      <a href="blogs.html">Blog</a>
+      <a href="reviews.html" aria-current="page">Reviews</a>
+      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap testimonials" aria-labelledby="reviews-heading">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <h1 id="reviews-heading" style="margin:0 0 6px">Traveller reviews</h1>
+          <p class="muted" style="margin:0">Real feedback from families, couples and solo travellers.</p>
+        </div>
+
+        <div style="display:flex;gap:8px;align-items:center">
+          <a class="btn btn-ghost" href="index.html">Back</a>
+          <a class="btn btn-primary" href="contact.html">Plan your trip</a>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <div style="background:linear-gradient(180deg,#fff,#fbfdff);padding:12px;border-radius:12px;box-shadow:var(--glass-shadow);min-width:160px">
+          <div style="font-size:28px;font-weight:800">4.8</div>
+          <div class="muted small">Average rating (based on <span id="reviewCount">124</span> reviews)</div>
+          <div style="margin-top:8px">
+            <div class="small muted">⭐ ⭐ ⭐ ⭐ ⭐</div>
+          </div>
+        </div>
+
+        <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+            <div class="muted small">5 stars</div><progress id="p5" max="100" value="82" style="width:60%"></progress><div class="small muted">82%</div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+            <div class="muted small">4 stars</div><progress id="p4" max="100" value="10" style="width:60%"></progress><div class="small muted">10%</div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+            <div class="muted small">3 stars</div><progress id="p3" max="100" value="5" style="width:60%"></progress><div class="small muted">5%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters & search -->
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <select id="filterRating" aria-label="Filter by rating">
+          <option value="">All ratings</option>
+          <option value="5">5 stars</option>
+          <option value="4">4 stars</option>
+          <option value="3">3 stars</option>
+        </select>
+
+        <input id="reviewSearch" type="search" placeholder="Search reviews (e.g., 'guide', 'family')" aria-label="Search reviews" style="padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);flex:1">
+        <button id="clearReviewFilters" class="btn btn-ghost">Clear</button>
+      </div>
+
+      <!-- Reviews list -->
+      <div id="reviewsList" style="margin-top:12px;display:grid;gap:12px">
+        <!-- sample reviews -->
+        <div class="testimonial" data-rating="5" tabindex="0">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <div>
+              <strong>Asha, Mumbai</strong>
+              <div class="small muted">Jul 2025</div>
+            </div>
+            <div aria-hidden="true">⭐ ⭐ ⭐ ⭐ ⭐</div>
+          </div>
+          <p class="muted" style="margin-top:8px">"Our family loved the itinerary — thoughtful activities and comfortable hotels. The guide was excellent with kids."</p>
+        </div>
+
+        <div class="testimonial" data-rating="5" tabindex="0">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <div>
+              <strong>Ravi & family</strong>
+              <div class="small muted">Jun 2025</div>
+            </div>
+            <div aria-hidden="true">⭐ ⭐ ⭐ ⭐ ⭐</div>
+          </div>
+          <p class="muted" style="margin-top:8px">"Smooth transfers and lovely hotels — everything went as planned."</p>
+        </div>
+
+        <div class="testimonial" data-rating="4" tabindex="0">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <div>
+              <strong>Sara, Delhi</strong>
+              <div class="small muted">May 2025</div>
+            </div>
+            <div aria-hidden="true">⭐ ⭐ ⭐ ⭐ ☆</div>
+          </div>
+          <p class="muted" style="margin-top:8px">"Great mix of nature and luxury. A few small logistic delays but team resolved them quickly."</p>
+        </div>
+      </div>
+
+      <!-- Load more / pagination -->
+      <div style="margin-top:12px;text-align:center">
+        <button id="loadMoreReviews" class="btn btn-ghost">Load more reviews</button>
+      </div>
+
+      <!-- Submit a review -->
+      <section style="margin-top:18px" aria-labelledby="add-review">
+        <h2 id="add-review">Add your review</h2>
+        <p class="muted" style="margin:0 0 8px">Share your experience — we publish reviews after moderation.</p>
+
+        <form id="addReviewForm" class="contact-form" style="margin-top:8px">
+          <input name="name" placeholder="Full name" required>
+          <input name="location" placeholder="City (optional)">
+          <select name="rating" required>
+            <option value="">Your rating</option>
+            <option value="5">5 — Excellent</option>
+            <option value="4">4 — Very good</option>
+            <option value="3">3 — Good</option>
+            <option value="2">2 — Fair</option>
+            <option value="1">1 — Poor</option>
+          </select>
+          <textarea name="review" placeholder="Write a short review (200 words max)" rows="4" required></textarea>
+          <div>
+            <button type="submit" class="btn btn-primary">Submit review</button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+          </div>
+          <div class="contact-legal muted" style="margin-top:8px">By submitting you agree to our <a href="privacy.html">privacy policy</a>.</div>
+        </form>
+      </section>
+    </section>
+
+    <footer class="site-footer" style="margin-top:18px">
+      <div class="wrap footer-inner">
+        <div>
+          <strong>OnVacation</strong>
+          <div class="muted">Curated travel packages · Trusted experiences</div>
+        </div>
+        <div class="muted">© <span id="year"></span> OnVacation</div>
+      </div>
+    </footer>
+  </main>
+
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+      // footer year
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      const reviewsList = document.getElementById('reviewsList');
+      const reviews = Array.from(reviewsList.children);
+      const filterRating = document.getElementById('filterRating');
+      const searchBox = document.getElementById('reviewSearch');
+      const clearBtn = document.getElementById('clearReviewFilters');
+      const loadMore = document.getElementById('loadMoreReviews');
+      const reviewCount = document.getElementById('reviewCount');
+
+      function matches(r) {
+        const rr = filterRating.value;
+        const q = (searchBox.value || '').trim().toLowerCase();
+        if (rr && r.dataset.rating !== rr) return false;
+        if (q) {
+          const text = (r.textContent || '').toLowerCase();
+          if (!text.includes(q)) return false;
+        }
+        return true;
+      }
+
+      function applyFilters() {
+        const list = Array.from(reviewsList.children);
+        let visible = 0;
+        list.forEach(r => {
+          r.style.display = matches(r) ? '' : 'none';
+          if (r.style.display !== 'none') visible++;
+        });
+        // update count
+        reviewCount.textContent = list.length;
+      }
+
+      filterRating?.addEventListener('change', applyFilters);
+      searchBox?.addEventListener('input', () => { clearTimeout(window._revT); window._revT = setTimeout(applyFilters, 150); });
+      clearBtn?.addEventListener('click', () => { filterRating.value=''; searchBox.value=''; applyFilters(); });
+
+      // Load more demo: clone sample reviews
+      loadMore?.addEventListener('click', () => {
+        const clone = reviews[0].cloneNode(true);
+        // optionally change date or name to indicate new
+        reviewsList.appendChild(clone);
+      });
+
+      // Add review (client-side demo only)
+      const form = document.getElementById('addReviewForm');
+      form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const fd = new FormData(form);
+        const name = fd.get('name') || 'Anonymous';
+        const location = fd.get('location') ? `, ${fd.get('location')}` : '';
+        const rating = fd.get('rating') || '5';
+        const reviewText = fd.get('review') || '';
+        // create node
+        const el = document.createElement('div');
+        el.className = 'testimonial';
+        el.dataset.rating = rating;
+        el.tabIndex = 0;
+        el.innerHTML = `
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <div><strong>${escapeHtml(name)}</strong><div class="small muted">${new Date().toLocaleDateString()}</div></div>
+            <div aria-hidden="true">${'⭐ '.repeat(Number(rating)).trim()}</div>
+          </div>
+          <p class="muted" style="margin-top:8px">${escapeHtml(reviewText)}</p>
+        `;
+        // append to top
+        reviewsList.insertBefore(el, reviewsList.firstChild);
+        form.reset();
+        applyFilters();
+        // in production: send to server for moderation & persistence
+        alert('Thanks — your review was submitted for moderation.');
+      });
+
+      function escapeHtml(str) {
+        return String(str).replace(/[&<>"']/g, function(m){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]); });
+      }
+
+      applyFilters();
+    });
+  </script>
+
+  <script src="scripts.js?v=20250913" defer></script>
+</body>
+</html>

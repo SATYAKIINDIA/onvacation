@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OnVacation — Experiences</title>
+  <meta name="description" content="Discover curated travel experiences from OnVacation — culture, wellness, adventure, family and bespoke events." />
+  <link rel="stylesheet" href="styles.css?v=20250913">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">OV</div>
+        <div class="brand-text">
+          <div class="brand-name">OnVacation</div>
+          <div class="brand-sub">Experiences</div>
+        </div>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary" id="primary-nav">
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="experiences.html" aria-current="page">Experiences</a>
+        <a href="media.html">Media</a>
+        <a href="blogs.html">Blog</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+      </nav>
+
+      <button class="hamburger" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="experiences.html" aria-current="page">Experiences</a>
+      <a href="media.html">Media</a>
+      <a href="blogs.html">Blog</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap experiences" aria-labelledby="exp-heading">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <h1 id="exp-heading" style="margin:0 0 6px">Experiences</h1>
+          <p class="muted" style="margin:0">Curated moments — cultural, wellness, adventure and family experiences crafted for memories.</p>
+        </div>
+
+        <div style="display:flex;gap:8px;align-items:center">
+          <a class="btn btn-ghost" href="index.html">Back</a>
+          <a class="btn btn-primary" href="contact.html">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- FILTER + SEARCH -->
+      <div style="margin-top:12px;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center">
+        <div style="display:flex;gap:8px">
+          <select id="exp-filter" aria-label="Filter experiences">
+            <option value="">All types</option>
+            <option value="culture">Local culture</option>
+            <option value="wellness">Wellness</option>
+            <option value="adventure">Adventure</option>
+            <option value="family">Family</option>
+            <option value="bespoke">Bespoke</option>
+          </select>
+
+          <select id="exp-duration" aria-label="Filter by duration">
+            <option value="">Any duration</option>
+            <option value="1">Half day</option>
+            <option value="1-2">1–2 days</option>
+            <option value="3+">3+ days</option>
+          </select>
+        </div>
+
+        <div>
+          <input id="exp-search" type="search" placeholder="Search experiences (e.g., desert, spa)" aria-label="Search experiences" style="padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);width:100%;">
+        </div>
+      </div>
+
+      <!-- experiences grid -->
+      <div id="experiencesGrid" class="experiences-grid" style="margin-top:12px">
+        <!-- each card has data attributes for filtering -->
+        <article class="exp-card" data-type="culture" data-duration="1" tabindex="0" aria-labelledby="e1">
+          <div class="exp-emoji">🎭</div>
+          <h3 id="e1">Village Cultural Evening</h3>
+          <p class="muted">An intimate evening with local performers, music & home-cooked dinner.</p>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn btn-ghost exp-detail" data-id="e-village">Details</button>
+            <a class="btn btn-primary" href="packages.html">Book</a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-type="wellness" data-duration="1-2" tabindex="0" aria-labelledby="e2">
+          <div class="exp-emoji">🧘‍♀️</div>
+          <h3 id="e2">Ayurvedic Wellness Retreat</h3>
+          <p class="muted">A two-day wellness program with consultations, massages and curated meals.</p>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn btn-ghost exp-detail" data-id="e-ayur">Details</button>
+            <a class="btn btn-primary" href="packages.html">Book</a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-type="adventure" data-duration="1-2" tabindex="0" aria-labelledby="e3">
+          <div class="exp-emoji">🏔️</div>
+          <h3 id="e3">Sunrise Mountain Trek</h3>
+          <p class="muted">Guided sunrise trek with picnic breakfast and photography stops.</p>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn btn-ghost exp-detail" data-id="e-trek">Details</button>
+            <a class="btn btn-primary" href="packages.html">Book</a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-type="family" data-duration="1" tabindex="0" aria-labelledby="e4">
+          <div class="exp-emoji">🎪</div>
+          <h3 id="e4">Family Theme Day</h3>
+          <p class="muted">A day of curated activities & shows for children and parents alike.</p>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn btn-ghost exp-detail" data-id="e-family">Details</button>
+            <a class="btn btn-primary" href="packages.html">Book</a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-type="bespoke" data-duration="3+" tabindex="0" aria-labelledby="e5">
+          <div class="exp-emoji">🎉</div>
+          <h3 id="e5">Bespoke Celebration Planning</h3>
+          <p class="muted">Full event planning — from venue to entertainment and logistics.</p>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn btn-ghost exp-detail" data-id="e-bespoke">Details</button>
+            <a class="btn btn-primary" href="contact.html">Enquire</a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-type="culture" data-duration="1" tabindex="0" aria-labelledby="e6">
+          <div class="exp-emoji">🍲</div>
+          <h3 id="e6">Private Home Dining</h3>
+          <p class="muted">Enjoy a private meal hosted by a local family — authentic flavors and stories.</p>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn btn-ghost exp-detail" data-id="e-dine">Details</button>
+            <a class="btn btn-primary" href="packages.html">Book</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="margin-top:14px;text-align:center">
+        <a class="btn btn-primary" href="packages.html">See packages featuring these experiences</a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE DETAIL MODAL -->
+    <div id="expModal" class="modal" aria-hidden="true" role="dialog" aria-label="Experience details">
+      <div class="modal-content" role="document">
+        <button class="close" aria-label="Close">✕</button>
+        <div id="expModalInner"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer" style="margin-top:18px">
+      <div class="wrap footer-inner">
+        <div>
+          <strong>OnVacation</strong>
+          <div class="muted">Curated travel packages · Trusted experiences</div>
+        </div>
+        <div class="muted">© <span id="year"></span> OnVacation</div>
+      </div>
+    </footer>
+  </main>
+
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+      // footer year
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      const expFilter = document.getElementById('exp-filter');
+      const expDuration = document.getElementById('exp-duration');
+      const expSearch = document.getElementById('exp-search');
+      const grid = document.getElementById('experiencesGrid');
+      const cards = Array.from(grid.querySelectorAll('.exp-card'));
+
+      function matches(card) {
+        const type = expFilter.value.trim().toLowerCase();
+        const dur = expDuration.value.trim();
+        const q = expSearch.value.trim().toLowerCase();
+
+        if (type) {
+          if ((card.dataset.type || '').toLowerCase() !== type) return false;
+        }
+        if (dur) {
+          // simple contains or numeric test
+          const cd = (card.dataset.duration || '').toLowerCase();
+          if (!cd.includes(dur)) return false;
+        }
+        if (q) {
+          const text = (card.textContent || '').toLowerCase();
+          if (!text.includes(q)) return false;
+        }
+        return true;
+      }
+
+      function applyFilters() {
+        cards.forEach(c => {
+          c.style.display = matches(c) ? '' : 'none';
+        });
+      }
+
+      expFilter?.addEventListener('change', applyFilters);
+      expDuration?.addEventListener('change', applyFilters);
+      expSearch?.addEventListener('input', () => {
+        // gentle debounce
+        clearTimeout(window._expSearchT);
+        window._expSearchT = setTimeout(applyFilters, 160);
+      });
+
+      // detail modal
+      const modal = document.getElementById('expModal');
+      const inner = document.getElementById('expModalInner');
+      const closeBtn = modal.querySelector('.close');
+
+      const catalog = {
+        "e-village": {
+          title: "Village Cultural Evening",
+          duration: "Half day",
+          price: "₹1,499 onwards (group pricing)",
+          overview: "An intimate evening with local performers — music, storytelling and a home-cooked dinner hosted by a local family.",
+          details: ["Local performers", "Traditional meal", "Return transfers (select cities)"],
+          how: ["Meet at village center", "Guided walking tour", "Dinner & performance", "Return by shared transfer"]
+        },
+        "e-ayur": {
+          title: "Ayurvedic Wellness Retreat",
+          duration: "1–2 days",
+          price: "From ₹6,999",
+          overview: "A rejuvenating program with Ayurvedic consultation, personalized massages and healthy cuisine.",
+          details: ["Consultation", "Daily massages", "Ayurvedic meals", "Quiet wellness setting"],
+          how: ["Arrival & consultation", "Therapy sessions", "Meals & rest", "Departure"]
+        },
+        "e-trek": {
+          title: "Sunrise Mountain Trek",
+          duration: "1 day",
+          price: "From ₹2,499",
+          overview: "Guided sunrise trek with a picnic breakfast and scenic photography stops. Beginner-friendly routes available.",
+          details: ["Guide", "Packed breakfast", "Transport to trailhead", "Safety kit provided"],
+          how: ["Early transfer to trailhead", "Guided ascent", "Sunrise view & breakfast", "Return"]
+        },
+        "e-family": {
+          title: "Family Theme Day",
+          duration: "1 day",
+          price: "From ₹3,999 (family package)",
+          overview: "A full day of curated family activities, shows, and safe play areas — perfect for children and parents.",
+          details: ["Children's shows", "Family activities", "Meals & snacks", "Supervised play areas"],
+          how: ["Arrival and welcome", "Activity blocks", "Family show & meal", "Departure"]
+        },
+        "e-bespoke": {
+          title: "Bespoke Celebration Planning",
+          duration: "Custom (multi-day)",
+          price: "Price on request",
+          overview: "Full event planning for weddings, anniversaries and private parties — we manage venue sourcing, vendors and entertainment.",
+          details: ["Venue sourcing", "Catering & entertainment", "Logistics & guest management"],
+          how: ["Consultation", "Proposal & plan", "On-site execution", "Post-event wrap"]
+        },
+        "e-dine": {
+          title: "Private Home Dining",
+          duration: "Half day",
+          price: "From ₹1,199",
+          overview: "A curated private dining experience in a local home with authentic regional dishes and conversation.",
+          details: ["Local hosts", "Multi-course meal", "Cultural exchange"],
+          how: ["Meet host", "Private dining", "Conversation & stories", "Farewell"]
+        }
+      };
+
+      function openExp(id) {
+        const d = catalog[id];
+        if (!d) {
+          inner.innerHTML = '<p>Details coming soon.</p>';
+        } else {
+          inner.innerHTML = `
+            <h3 style="margin-top:0">${d.title}</h3>
+            <div style="display:flex;justify-content:space-between;gap:12px;align-items:center">
+              <div><strong class="muted">${d.duration}</strong><div class="small muted">${d.price}</div></div>
+              <div><a class="btn btn-primary" href="packages.html">Find packages</a></div>
+            </div>
+            <p class="muted" style="margin-top:10px">${d.overview}</p>
+            <h4 style="margin-top:10px">Inclusions</h4>
+            <ul>${d.details.map(i=>`<li class="muted">${i}</li>`).join('')}</ul>
+            <h4 style="margin-top:10px">How it works</h4>
+            <ol>${d.how.map(s=>`<li class="muted">${s}</li>`).join('')}</ol>
+            <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+              <a class="btn btn-primary" href="contact.html">Request this experience</a>
+              <a class="btn btn-ghost" href="contact.html">Ask a question</a>
+            </div>
+          `;
+        }
+
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        closeBtn?.focus();
+      }
+
+      document.querySelectorAll('.exp-detail').forEach(b=>{
+        b.addEventListener('click', ()=> openExp(b.dataset.id));
+      });
+
+      // modal controls
+      closeBtn?.addEventListener('click', ()=> {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden','true');
+        inner.innerHTML = '';
+      });
+      modal?.addEventListener('click', (ev)=> { if (ev.target === modal) { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); inner.innerHTML=''; }});
+      document.addEventListener('keydown', (ev)=> { if (ev.key === 'Escape') { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); inner.innerHTML=''; }});
+
+    });
+  </script>
+
+  <script src="scripts.js?v=20250913" defer></script>
+</body>
+</html>

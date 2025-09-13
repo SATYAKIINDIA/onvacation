@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>OnVacation — Luxury & Joyful Travel Experiences</title>
   <meta name="description" content="OnVacation — curated premium tours across India: trust, local knowledge, luxury stays and memorable experiences." />
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20250913">
 </head>
 <body>
   <header class="site-header">
@@ -19,22 +19,26 @@
       </div>
 
       <nav class="navlinks" aria-label="Primary" id="primary-nav">
-        <a href="#packages">Packages</a>
-        <a href="#experiences">Experiences</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#testimonials">Reviews</a>
-        <a href="#contact" class="btn btn-primary">Get a Quote</a>
+        <a href="index.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="media.html">Media</a>
+        <a href="blogs.html">Blog</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
       </nav>
 
       <button class="hamburger" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">☰</button>
     </div>
 
     <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-      <a href="#packages">Packages</a>
-      <a href="#experiences">Experiences</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#testimonials">Reviews</a>
-      <a href="#contact" class="btn btn-primary">Get a Quote</a>
+      <a href="index.html">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="media.html">Media</a>
+      <a href="blogs.html">Blog</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
     </div>
   </header>
 
@@ -48,8 +52,8 @@
           <p class="lead">OnVacation blends boutique luxury, local culture and effortless service — tailored for families, couples and explorers who want more than a trip: they want a story.</p>
 
           <div class="hero-ctas">
-            <a class="btn btn-primary" href="#packages">Explore Premium Packages</a>
-            <a class="btn btn-ghost" href="#contact">Plan My Trip</a>
+            <a class="btn btn-primary" href="packages.html">Explore Premium Packages</a>
+            <a class="btn btn-ghost" href="contact.html">Plan My Trip</a>
           </div>
 
           <ul class="trust-list" aria-hidden="true">
@@ -73,7 +77,6 @@
 
         <aside class="hero-right" aria-hidden="true">
           <div class="hero-media-wrap">
-            <!-- responsive picture -->
             <picture>
               <source media="(min-width:1000px)" srcset="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop">
               <source media="(min-width:680px)" srcset="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop">
@@ -86,9 +89,9 @@
             </div>
           </div>
 
-          <div class="mini-trust" aria-hidden="true">
+          <div class="mini-trust" aria-hidden="true" style="margin-top:12px">
             <div><strong>Trusted by</strong><div class="muted">thousands of families</div></div>
-            <div class="badges">
+            <div class="badges" style="display:flex;gap:8px;margin-top:8px">
               <div class="seal">ISO</div>
               <div class="seal">SafePay</div>
               <div class="seal">TopRated</div>
@@ -98,231 +101,137 @@
       </div>
     </section>
 
-    <!-- EXPERIENCES -->
-    <section id="experiences" class="wrap experiences">
-      <h2>Experiences we design</h2>
-      <p class="muted">Every package includes at least one unforgettable moment — be it a private cultural dinner, desert sleepout, or a sunrise on a mountain ridge.</p>
+    <!-- HIGHLIGHTS: Featured packages -->
+    <section class="wrap packages-preview" aria-labelledby="featured-packages">
+      <h2 id="featured-packages">Featured packages</h2>
+      <p class="muted">Hand-picked with love — popular, family-friendly and luxury picks.</p>
 
-      <div class="experiences-grid">
+      <div class="packages-grid" style="margin-top:12px">
+        <!-- Minimal card previews linking to full packages page -->
+        <article class="pkg-card" style="padding:12px">
+          <h3>Rajasthan Highlights — 7 days</h3>
+          <p class="meta muted">Udaipur • Jodhpur • Jaisalmer</p>
+          <div class="pkg-bottom" style="margin-top:8px">
+            <div class="price">₹12,499</div>
+            <a class="btn btn-ghost" href="packages.html">Explore</a>
+          </div>
+        </article>
+
+        <article class="pkg-card" style="padding:12px">
+          <h3>Kerala Backwaters — 6 days</h3>
+          <p class="meta muted">Houseboat • Ayurveda • Tea gardens</p>
+          <div class="pkg-bottom" style="margin-top:8px">
+            <div class="price">₹16,250</div>
+            <a class="btn btn-ghost" href="packages.html">Explore</a>
+          </div>
+        </article>
+
+        <article class="pkg-card" style="padding:12px">
+          <h3>Himachal Scenic Escape — 6 days</h3>
+          <p class="meta muted">Shimla • Manali</p>
+          <div class="pkg-bottom" style="margin-top:8px">
+            <div class="price">₹14,750</div>
+            <a class="btn btn-ghost" href="packages.html">Explore</a>
+          </div>
+        </article>
+      </div>
+
+      <div style="margin-top:12px;text-align:center">
+        <a class="btn btn-primary" href="packages.html">View all packages</a>
+      </div>
+    </section>
+
+    <!-- Experiences Preview -->
+    <section class="wrap experiences-preview" aria-labelledby="experiences-preview">
+      <h2 id="experiences-preview">Handpicked experiences</h2>
+      <p class="muted">Small moments we craft into lifelong memories.</p>
+
+      <div class="experiences-grid" style="margin-top:12px">
         <div class="exp-card">
           <div class="exp-emoji">🎭</div>
           <h3>Local Culture</h3>
-          <p>Private performances, culinary journeys and meet-the-artist sessions.</p>
         </div>
         <div class="exp-card">
           <div class="exp-emoji">🏖️</div>
-          <h3>Relax & Rejuvenate</h3>
-          <p>Curated beach stays, Ayurveda sessions and slow living itineraries.</p>
+          <h3>Wellness</h3>
         </div>
         <div class="exp-card">
           <div class="exp-emoji">🏜️</div>
-          <h3>Adventure & Nature</h3>
-          <p>Desert nights, mountain treks, wildlife safaris — responsibly guided.</p>
+          <h3>Adventure</h3>
         </div>
         <div class="exp-card">
           <div class="exp-emoji">🎉</div>
-          <h3>Fun & Entertainment</h3>
-          <p>Family shows, private movie nights and bespoke celebrations.</p>
+          <h3>Family Fun</h3>
         </div>
       </div>
-    </section>
 
-    <!-- PACKAGES -->
-    <section id="packages" class="wrap packages">
-      <h2>Our popular packages</h2>
-      <p class="muted">Designed with heart. Luxury options available for every itinerary.</p>
-
-      <div class="packages-grid">
-        <article class="pkg-card premium" tabindex="0" aria-labelledby="pkg1">
-          <div class="ribbon" aria-hidden="true">Luxury</div>
-          <h3 id="pkg1">Rajasthan Royal Heritage — 9 days</h3>
-          <p class="meta">Udaipur • Jodhpur • Jaisalmer • Fort dinner</p>
-          <ul class="pkg-features">
-            <li>Luxury heritage hotels</li>
-            <li>Private guided tours & royal dining</li>
-            <li>Desert camp with cultural evening</li>
-          </ul>
-          <div class="pkg-bottom">
-            <div class="price">₹39,999 <span class="small muted">/ person</span></div>
-            <a class="btn btn-primary" href="#contact">Enquire</a>
-          </div>
-        </article>
-
-        <article class="pkg-card classic" tabindex="0" aria-labelledby="pkg2">
-          <div class="ribbon ribbon-alt" aria-hidden="true">Popular</div>
-          <h3 id="pkg2">Rajasthan Highlights — 7 days</h3>
-          <p class="meta">Udaipur • Jodhpur • Jaisalmer</p>
-          <ul class="pkg-features">
-            <li>Selected 4★ hotels</li>
-            <li>Private transfers & local guides</li>
-            <li>Child-friendly activities</li>
-          </ul>
-          <div class="pkg-bottom">
-            <div class="price">₹12,499 <span class="small muted">/ person</span></div>
-            <a class="btn btn-ghost" href="#contact">Book Now</a>
-          </div>
-        </article>
-
-        <article class="pkg-card relax" tabindex="0" aria-labelledby="pkg3">
-          <h3 id="pkg3">Kerala Backwaters & Wellness — 6 days</h3>
-          <p class="meta">Cochin • Alleppey • Houseboat</p>
-          <ul class="pkg-features">
-            <li>Private houseboat night</li>
-            <li>Ayurvedic spa & tea gardens</li>
-            <li>Local cuisine experiences</li>
-          </ul>
-          <div class="pkg-bottom">
-            <div class="price">₹16,250 <span class="small muted">/ person</span></div>
-            <a class="btn btn-primary" href="#contact">Enquire</a>
-          </div>
-        </article>
-
-        <article class="pkg-card mountains" tabindex="0" aria-labelledby="pkg4">
-          <h3 id="pkg4">Himachal Scenic Escape — 6 days</h3>
-          <p class="meta">Shimla • Manali • Solang Valley</p>
-          <ul class="pkg-features">
-            <li>Scenic drives & easy treks</li>
-            <li>Mountain village experiences</li>
-            <li>Optional adventure add-ons</li>
-          </ul>
-          <div class="pkg-bottom">
-            <div class="price">₹14,750 <span class="small muted">/ person</span></div>
-            <a class="btn btn-ghost" href="#contact">Book Now</a>
-          </div>
-        </article>
-
-        <article class="pkg-card bespoke" tabindex="0" aria-labelledby="pkg5">
-          <h3 id="pkg5">Celebrate With Us — Bespoke Events</h3>
-          <p class="meta">Weddings · Anniversaries · Private parties</p>
-          <p class="muted">Design a memorable celebration — we handle logistics, venues & entertainment.</p>
-          <div class="pkg-bottom">
-            <a class="btn btn-primary" href="#contact">Plan Event</a>
-          </div>
-        </article>
-
-        <article class="pkg-card family" tabindex="0" aria-labelledby="pkg6">
-          <h3 id="pkg6">Family Fun Pack — 5 days</h3>
-          <p class="meta">Kid-friendly itineraries & activities</p>
-          <ul class="pkg-features">
-            <li>Theme activities & safe transfers</li>
-            <li>Family rooms & child meals</li>
-            <li>Free stays for age &lt;5</li>
-          </ul>
-          <div class="pkg-bottom">
-            <div class="price">₹11,499 <span class="small muted">/ person</span></div>
-            <a class="btn btn-ghost" href="#contact">Book Now</a>
-          </div>
-        </article>
+      <div style="margin-top:12px;text-align:center">
+        <a class="btn btn-ghost" href="experiences.html">See all experiences</a>
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="wrap testimonials">
-      <h2>Traveler stories</h2>
-      <div class="testimonials-grid">
-        <blockquote class="testimonial">
-          <p>"OnVacation turned our family trip into magic — the desert dinner and the little surprises made this trip unforgettable."</p>
-          <cite>— Asha, Mumbai</cite>
+    <!-- Media teaser -->
+    <section class="wrap media-preview" aria-labelledby="media-preview">
+      <h2 id="media-preview">Moments from the road</h2>
+      <p class="muted">Real travellers, real memories — photos and short videos.</p>
+
+      <div class="insta-grid" style="margin-top:10px">
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=600&auto=format&fit=crop" alt="sample" loading="lazy"></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=600&auto=format&fit=crop" alt="sample" loading="lazy"></div>
+        <div class="insta-item video-thumb"><video muted loop playsinline preload="none"><source src="https://player.vimeo.com/external/389850909.sd.mp4?s=5e27da77928b8f6ab3a5b596d68d1a317f6dfb2f&profile_id=165&oauth2_token_id=57447761" type="video/mp4"></video></div>
+        <div class="insta-item"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=600&auto=format&fit=crop" alt="sample" loading="lazy"></div>
+      </div>
+
+      <div style="margin-top:12px;text-align:center">
+        <a class="btn btn-primary" href="media.html">Open gallery</a>
+      </div>
+    </section>
+
+    <!-- Blog teaser -->
+    <section class="wrap blog-preview" aria-labelledby="blog-preview">
+      <h2 id="blog-preview">Travel stories & tips</h2>
+      <p class="muted">Read destination guides, packing tips and special offers.</p>
+
+      <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <article style="background:#fff;padding:12px;border-radius:10px;box-shadow:var(--glass-shadow)">
+          <strong>5 must-see spots in Udaipur</strong>
+          <p class="muted" style="margin-top:6px;font-size:13px">Short guide with local tips and best times to visit.</p>
+        </article>
+        <article style="background:#fff;padding:12px;border-radius:10px;box-shadow:var(--glass-shadow)">
+          <strong>Packing for monsoon travel</strong>
+          <p class="muted" style="margin-top:6px;font-size:13px">Essentials to keep your family comfy on the road.</p>
+        </article>
+      </div>
+
+      <div style="margin-top:12px;text-align:center">
+        <a class="btn btn-ghost" href="blogs.html">Visit blog</a>
+      </div>
+    </section>
+
+    <!-- Reviews teaser -->
+    <section class="wrap reviews-preview" aria-labelledby="reviews-preview">
+      <h2 id="reviews-preview">What travellers say</h2>
+      <p class="muted">Reviews from families, couples and solo travellers.</p>
+
+      <div style="margin-top:12px;display:grid;gap:10px">
+        <blockquote style="background:#fff;padding:12px;border-radius:10px;box-shadow:var(--glass-shadow)">
+          "Our family loved the itinerary — so many little thoughtful touches!"
+          <cite style="display:block;margin-top:8px" class="muted">— Asha, Mumbai</cite>
         </blockquote>
 
-        <blockquote class="testimonial">
-          <p>"Seamless transfers, great hotels and personal attention. We felt safe and pampered the whole time."</p>
-          <cite>— Ravi & family</cite>
-        </blockquote>
-
-        <blockquote class="testimonial">
-          <p>"Perfect mix of nature and luxe. The guide knew the best spots for photos and hidden cafes."</p>
-          <cite>— Sara, Delhi</cite>
-        </blockquote>
-      </div>
-
-      <div class="trust-strip" aria-hidden="true">
-        <div class="trust-item">🛡️ Secure booking</div>
-        <div class="trust-item">✅ Verified partners</div>
-        <div class="trust-item">📞 24/7 local support</div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="wrap gallery">
-      <h2>Moments from the road</h2>
-      <p class="muted">Real travellers. Real moments. Click to expand.</p>
-
-      <div class="insta-grid" id="instaGrid">
-        <!-- images & videos: use loading lazy for imgs -->
-        <div class="insta-item" onclick="openModal(0)" role="button" tabindex="0"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop" alt="Rajasthan sunset" loading="lazy"></div>
-        <div class="insta-item" onclick="openModal(1)" role="button" tabindex="0"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=800&auto=format&fit=crop" alt="Houseboat backwaters" loading="lazy"></div>
-        <div class="insta-item" onclick="openModal(2)" role="button" tabindex="0"><img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?q=80&w=800&auto=format&fit=crop" alt="Mountain retreat" loading="lazy"></div>
-        <div class="insta-item" onclick="openModal(3)" role="button" tabindex="0"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop" alt="Traveler moments" loading="lazy"></div>
-
-        <div class="insta-item" onclick="openModal(4)" role="button" tabindex="0"><img src="https://images.unsplash.com/photo-1533008628666-517f57f6d127?q=80&w=800&auto=format&fit=crop" alt="Cultural performance" loading="lazy"></div>
-        <div class="insta-item" onclick="openModal(5)" role="button" tabindex="0"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=800&auto=format&fit=crop" alt="Tea garden mornings" loading="lazy"></div>
-
-        <div class="insta-item video-thumb" onclick="openModal(6)" role="button" tabindex="0">
-          <video muted loop playsinline preload="none">
-            <source src="https://player.vimeo.com/external/389850909.sd.mp4?s=5e27da77928b8f6ab3a5b596d68d1a317f6dfb2f&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
-          </video>
-        </div>
-
-        <div class="insta-item video-thumb" onclick="openModal(7)" role="button" tabindex="0">
-          <video muted loop playsinline preload="none">
-            <source src="https://player.vimeo.com/external/378340068.sd.mp4?s=f62c345d0ee00f6ebf0d24a5a014c5fae70c6fa7&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
-          </video>
-        </div>
-
-        <div class="insta-item" onclick="openModal(8)" role="button" tabindex="0"><img src="https://images.unsplash.com/photo-1517861281961-7f7f9d8c4d5e?q=80&w=800&auto=format&fit=crop" alt="Evening market" loading="lazy"></div>
-      </div>
-
-      <div id="lightbox" class="modal" aria-hidden="true" role="dialog" aria-label="Preview">
-        <div class="modal-content" role="document">
-          <button class="close" aria-label="Close">✕</button>
-          <div id="lightbox-inner" class="modal-inner"></div>
+        <div style="text-align:center;margin-top:8px">
+          <a class="btn btn-primary" href="reviews.html">Read more reviews</a>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="wrap faq">
-      <h2>Frequently asked</h2>
-      <div class="faq-grid">
-        <div>
-          <h4>Are bookings secure?</h4>
-          <p class="muted">Yes — we use secure payment partners and confirm bookings with partners directly.</p>
-        </div>
-        <div>
-          <h4>Can I customize dates & hotels?</h4>
-          <p class="muted">Absolutely. Every package is fully customizable to your needs.</p>
-        </div>
-        <div>
-          <h4>What about child policies?</h4>
-          <p class="muted">Children under 5 often stay free — we'll confirm based on the hotel policy.</p>
-        </div>
+    <!-- Contact CTA -->
+    <section class="wrap contact-cta" aria-labelledby="contact-cta">
+      <h3 id="contact-cta">Ready to start?</h3>
+      <p class="muted">Tell us your dates, group size and vibe — we’ll craft a plan.</p>
+      <div style="margin-top:10px">
+        <a class="btn btn-primary" href="contact.html">Get a customized quote</a>
       </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="wrap contact">
-      <h2>Let's craft your trip</h2>
-      <p class="muted">Share dates, travellers and mood — we’ll do the rest.</p>
-
-      <form id="contactForm" class="contact-form" onsubmit="event.preventDefault(); alert('Thanks — we will contact you soon!');">
-        <input name="name" placeholder="Full name" required>
-        <input name="email" placeholder="Email" type="email" required>
-        <input name="phone" placeholder="Phone (optional)">
-        <select name="package">
-          <option value="">Interested in</option>
-          <option>Rajasthan Royal Heritage</option>
-          <option>Rajasthan Highlights</option>
-          <option>Kerala Backwaters</option>
-          <option>Himachal Escape</option>
-          <option>Family Fun Pack</option>
-          <option>Bespoke Event</option>
-        </select>
-        <textarea name="message" placeholder="Dates, travellers, vibe (adventure / relax / luxury)"></textarea>
-        <button class="btn btn-primary" type="submit">Request Quote</button>
-      </form>
-
-      <div class="contact-legal muted">Contact: support@onvacation.example · +91 98xxxxxxx · GST: 12ABCDE3456F7Z</div>
     </section>
 
     <footer class="site-footer">
@@ -336,6 +245,6 @@
     </footer>
   </main>
 
-  <script src="scripts.js" defer></script>
+  <script src="scripts.js?v=20250913" defer></script>
 </body>
 </html>
